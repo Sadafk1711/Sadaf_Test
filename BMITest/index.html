@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <script src="script.js"></script>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 15px;
+            height: 100vh;
+            padding: 10;
+            background-color: #fcf4d3;
+        }
+
+        .form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+        }
+
+        .form:hover{
+            box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+        }
+
+        #submit{
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: antiquewhite;
+            margin: 10px;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #submit:hover{
+            background-color: #acdba1;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Body Mass Index (BMI) Calculator</h1>
+    <form class = "form" id = "form" onsubmit ="return validateForm()">
+        <div class = "age-row">
+            <label for="age">Age:</label>
+            <input type="number" class= "text-input" id ="age" placeholder="This is a required field" required>
+        </div>
+        <br>
+        
+        <div class = "height-row">
+            <label for="height">Height(cm):</label>
+            <input type="number" class= "text-input" id ="height" placeholder="This is a required field" required>
+        </div>
+        <br>
+
+        <div class = "weight-row">
+            <label for="weight">Weight(kg):</label>
+            <input type="number" class= "text-input" id ="weight" placeholder="This is a required field" required>
+        </div>
+        <br>
+
+        <button type="submit" id="submit">Calculate</button>
+    </form>
+</body>
+</html>
